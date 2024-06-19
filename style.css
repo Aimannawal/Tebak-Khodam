@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #80C4E9; /* Set the background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.left-panel {
+    flex: 1;
+    text-align: center;
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+}
+
+.title {
+    margin-top: 0;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Align form items in column */
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%; /* Set width of input field to 100% of the form's width */
+    max-width: 300px; /* Set a maximum width for the input field */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF; /* Blue color for button */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin-top: 10px; /* Add some space above the button */
+    width: 100%; /* Set width of button to 100% of the form's width */
+    max-width: 300px; /* Set a maximum width for the button */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue for hover state */
+}
+
+.result {
+    margin-top: 20px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.result.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.result img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.result p {
+    font-size: 20px; /* Reduced font size for result text */
+}
+
+@media (max-width: 400px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input[type="text"], button {
+        max-width: 100%;
+    }
+}
